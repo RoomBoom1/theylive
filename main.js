@@ -48,7 +48,7 @@
 	////////////////////////////////////////////////////////////////////////////////
 	// create atToolkitContext
 	var arToolkitContext = new THREEx.ArToolkitContext({
-		cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '/data/data/camera_para.dat',
+		cameraParametersUrl: THREEx.ArToolkitContext.baseURL + 'camera_para.dat',
 		detectionMode: 'mono',
 		patternRatio: 0.9,
 	})
@@ -75,7 +75,7 @@
 		scene.add(markerRoot)
 		var markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
 			type : "pattern",
-			patternUrl : "assets/pattern-" + patternList[i] + "-new.patt",
+			patternUrl : THREEx.ArToolkitContext.baseURL + "pattern-" + patternList[i] + "-new.patt",
 		})
 		markerList.push(markerRoot)
 	}
@@ -101,7 +101,7 @@
 	var euroRoot = markerList[2]
 	
 	var dollar = new THREE.OBJLoader()
-	dollar.load("assets/obey.obj", function (object) {
+	dollar.load(THREEx.ArToolkitContext.baseURL + "obey.obj", function (object) {
 		object.scale.set(0.7,0.7,0.7)
 		object.position.set(0, 0, 0)
 		dollarRoot.add(object)
@@ -109,14 +109,14 @@
 	
 
 	var sale = new THREE.OBJLoader()
-	sale.load("assets/consume.obj", function (object) {
+	sale.load(THREEx.ArToolkitContext.baseURL + "consume.obj", function (object) {
 		object.scale.set(0.5,0.5,0.5)
 		object.position.set(0, 0, 0)
 		saleRoot.add(object)
 		})
 
 	var euro = new THREE.OBJLoader()
-	euro.load("assets/thought.obj", function (object) {
+	euro.load( THREEx.ArToolkitContext.baseURL + "thought.obj", function (object) {
 		object.scale.set(0.5,0.5,0.5)
 		object.position.set(0, 0, 0)
 		euroRoot.add(object)
