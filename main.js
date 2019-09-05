@@ -75,7 +75,7 @@
 		scene.add(markerRoot)
 		var markerControls = new THREEx.ArMarkerControls(arToolkitContext, markerRoot, {
 			type : "pattern",
-			patternUrl : "/assets/pattern-" + patternList[i] + "-new.patt",
+			patternUrl : "assets/pattern-" + patternList[i] + "-new.patt",
 		})
 		markerList.push(markerRoot)
 	}
