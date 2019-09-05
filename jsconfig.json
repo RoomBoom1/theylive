@@ -1,0 +1,11 @@
+{   
+    "compilerOptions": {
+	"checkJs": true
+    },
+    "include": [
+        "lib/AR.js/three.js/build/ar.js",
+	"lib/three.js/build/three.js",
+	"lib/p5/p5.js"
+    ]
+}
+
